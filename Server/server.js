@@ -1,6 +1,7 @@
 const express = require("express");
 const connectDB = require("./db");
 const cors = require("cors");
+const path = require("path");
 require("dotenv").config();
 
 const app = express();
@@ -18,6 +19,18 @@ app.use("/api/posts", require("./routes/posts"));
 
 // Simple root route for testing
 app.get("/", (req, res) => res.send("API Running"));
+
+// -------- Serve React frontend in production --------
+if (process.env.NODE_ENV === "production") {
+  const frontendPath = path.join(__dirname, "client", "build");
+  app.use(express.static(frontendPath));
+
+  // Catch-all: send index.html for any non-API route
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(frontendPath, "index.html"));
+  });
+}
+// -----------------------------------------------------
 
 const PORT = process.env.PORT || 5000;
 
