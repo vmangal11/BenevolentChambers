@@ -11,7 +11,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { HandThumbUpIcon as LikeIconSolid } from "@heroicons/react/24/solid";
 
-const API_URL = "https://benevolentchambers.onrender.com";
+const API_URL = "https://benevolentchambers.onrender.com/api";
 
 const dummyPosts = [
   {

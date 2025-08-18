@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const API_URL = "https://benevolentchambers.onrender.com";
+const API_URL = "https://benevolentchambers.onrender.com/api";
 
 export default function ResetPassword() {
   const [password, setPassword] = useState("");
@@ -67,7 +67,9 @@ export default function ResetPassword() {
       <div className="bg-white p-8 rounded-lg shadow-md max-w-sm w-full">
         <h2 className="text-2xl font-bold mb-6 text-center">Reset Password</h2>
         {error && <p className="text-red-500 text-center mb-4">{error}</p>}
-        {message && <p className="text-green-500 text-center mb-4">{message}</p>}
+        {message && (
+          <p className="text-green-500 text-center mb-4">{message}</p>
+        )}
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label
