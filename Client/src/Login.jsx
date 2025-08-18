@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api"; // Your backend API URL
+const API_URL = "https://benevolentchambers.onrender.com"; // Your backend API URL
 
 export default function LoginModal({ onClose, onLogin }) {
   const [isRegister, setIsRegister] = useState(false);
