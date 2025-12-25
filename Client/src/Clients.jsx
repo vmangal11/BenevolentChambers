@@ -37,7 +37,7 @@ const Clients = () => {
   ];
 
   return (
-    <section np className="px-4 py-12 bg-white text-center">
+    <section np className="px-4 py-12 bg-[#eaeef3] text-center">
       <h4 className="text-sm text-gray-600 mb-2">Our Valued Partners</h4>
       <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-10 text-[#0a1b38]">
         SERVING INDUSTRY LEADERS

@@ -10,23 +10,45 @@ export default function CustomAccordion() {
 
   const items = [
     {
-      title: "Data Protection",
+      title: "Corporate & Commercial Advisory",
       content:
-        "Change the text and add your own content, including any information that is relevant to share. Then customize the font, size and scale to make it your own.",
+        "We advise businesses on corporate governance, compliance, and commercial transactions. Our practice encompasses review and negotiation of commercial agreements, corporate structuring, and resolution of organizational matters under applicable corporate laws.",
     },
     {
-      title: "Corporate",
+      title: "Intellectual Property",
       content:
-        "Change the text and add your own content, including any information that is relevant to share. Then customize the font, size and scale to make it your own.",
+        "We handle trademark, copyright, design, and patent matters including registration, enforcement, infringement proceedings, and IP due diligence. Our services extend to IP portfolio management and protection strategies.",
     },
     {
-      title: "Commercial",
+      title: "Private Equity & Mergers and Acquisitions",
       content:
-        "Change the text and add your own content, including any information that is relevant to share. Then customize the font, size and scale to make it your own.",
+        "We advise on M&A transactions and private equity investments. Our services include transaction structuring, legal due diligence, preparation of transaction documents, FEMA compliance, and advisory on security instruments and exit mechanisms.",
     },
-    { title: "Project3", content: "yet another amazing project" },
-    { title: "Project3", content: "yet another amazing project" },
-    { title: "Project3", content: "yet another amazing project" },
+    {
+      title: "Dispute Resolution & Litigation",
+      content:
+        "We represent clients in commercial disputes before courts, tribunals, and arbitral forums. Our practice covers corporate law, intellectual property, and contractual disputes through litigation and domestic and international arbitration.",
+    },
+    {
+      title: "Prevention of Sexual Harassment (PoSH) Compliance",
+      content:
+        "We advise on compliance with the Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013. Our services include policy drafting, establishment and training of Internal Complaints Committees, awareness programs, and investigation protocols.",
+    },
+    {
+      title: "Private Client & Family Advisory",
+      content:
+        "We advise individuals and families on wealth structuring, succession planning, estate matters, creation and administration of trusts, inheritance, and family dispute resolution.",
+    },
+    {
+      title: "Data Protection & Privacy",
+      content:
+        "We advise on compliance with the Digital Personal Data Protection Act, 2023. Our services include compliance assessments, policy implementation, advisory on data subject rights and cross-border transfers, breach response protocols, and obligations applicable to Data Fiduciaries.",
+    },
+    {
+      title: "Other Practice Areas",
+      content:
+        "We offer comprehensive legal and strategic advisory services across a diverse range of sectors, including celebrity endorsements, capital markets, real estate, and other specialized areas. We assist clients in navigating complex regulatory frameworks, structuring transactions, and protecting their interests, ensuring tailored solutions that align with both business objectives and legal compliance.",
+    },
   ];
 
   return (

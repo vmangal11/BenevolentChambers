@@ -94,7 +94,7 @@ export default function HomePage() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className="font-serif text-[#001c3d] bg-blue-200">
+    <div className="font-serif text-[#001c3d] bg-[#eaeef3]">
       {/* Header */}
       <header className="bg-white shadow-md py-2 px-4 sticky top-0 z-50">
         <nav>
@@ -167,15 +167,15 @@ export default function HomePage() {
             alt="About Background"
             className="w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
           />
-          <div className="absolute inset-0 bg-white opacity-40"></div>
+          <div className="absolute inset-0 bg-[#dceefc] opacity-40"></div>
         </div>
 
         {/* Foreground content */}
         <div className="relative z-20 px-4 text-center flex flex-col items-center justify-center h-full">
-          <h1 className="text-2xl md:text-3xl font-bold mb-2 text-[#001c3d]">
+          <div className="text-2xl md:text-3xl font-bold mb-2 text-[#001c3d]">
             ABOUT OUR FIRM
-          </h1>
-          <p className="text-sm md:text-base max-w-3xl mx-auto text-[#001c3d]">
+          </div>
+          <p className="text-lg font-semibold md:text-base max-w-3xl mx-auto text-[#001c3d]">
             We are a young and dynamic team of transactional, data privacy and
             intellectual property rights lawyers, individually having experience
             of 8+ years in tier-1 law firms and international organisations. We
@@ -189,7 +189,7 @@ export default function HomePage() {
       {/* Practice Areas */}
       <motion.section
         id="Practice Areas"
-        className="bg-[#f4f7fa] dark:bg-[#0f172a] text-[#001c3d] dark:text-white px-6 py-10 scroll-mt-14"
+        className="bg-[#eaeef3] dark:bg-[#0f172a] text-[#001c3d] dark:text-white px-6 py-10 scroll-mt-14"
         // initial={{ opacity: 0, y: 50 }}
         // animate={{ opacity: 1, y: 0 }}
         // transition={{ duration: 0.8, ease: "easeOut" }}
@@ -308,7 +308,7 @@ export default function HomePage() {
       {/* Why choose us */}
       <section
         id="choose"
-        className="bg-[#f4f7fa] text-center p-6 scroll-mt-14"
+        className="bg-[#eaeef3] text-center p-6 scroll-mt-14"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -357,73 +357,87 @@ export default function HomePage() {
       <section id="clients" className="scroll-mt-14">
         <Clients />
       </section>
-      <footer className="text-black py-8 shadow-lg bg-[#eaeef3]">
-        <div className="mx-8 flex flex-col md:flex-row justify-between items-start gap-8">
+      <footer className="text-gray-100 py-10 bg-gradient-to-br from-[#0f172a] to-[#1e293b] shadow-2xl">
+        <div className="mx-8 flex flex-col md:flex-row justify-between items-start gap-12">
+          {/* Brand + Description */}
+          <div>
+            <h2 className="text-2xl font-bold text-white tracking-wide mb-3">
+              Benevolent Law Chambers
+            </h2>
+            <p className="text-gray-400 leading-relaxed text-break">
+              Providing trusted legal expertise with professionalism, integrity,
+              and a client‑first approach. We are committed to delivering
+              excellence in every case we handle.
+            </p>
+          </div>
+
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-2">Contact Us</h4>
-            <p className="flex items-center">
-              <MapPin className="w-5 h-5 mr-2" />
-              <a
-                href="https://www.google.co.in/maps/place/7th+Floor,+Express+Trade+Tower,+2+B-36,+Expressway,+Block+B,+Sector+132,+Noida,+Uttar+Pradesh+201301/@28.5141572,77.3752256,17z/data=!3m1!4b1!4m6!3m5!1s0x390ce6278e7abe5d:0x9b6f1f160085caac!8m2!3d28.5141572!4d77.3778005!16s%2Fg%2F11tngfx8yw?entry=ttu&g_ep=EgoyMDI1MDYyMy4yIKXMDSoASAFQAw%3D%3D"
-                className="hover:text-blue-300"
-              >
-                Unit no. 20, 1701, 7th Floor, Express Trade Tower -2,
-                Sector-132, Noida -201301
-              </a>
-            </p>
-            <p className="flex items-center">
-              <Mail className="w-5 h-5 mr-2" />
-              <a
-                href="mailto:contact@benevolentlaw.com"
-                className="hover:text-blue-300"
-              >
-                contact@benevolentlaw.com
-              </a>
-            </p>
-            <p className="flex items-center">
-              <PhoneCall className="w-5 h-5 mr-2" />
-              <a href="tel:+911234567890" className="hover:text-blue-300">
-                +91- 9899997595
-              </a>
-            </p>
-            <p className="flex items-center">
-              <Timer className="w-5 h-5 mr-2" />
-              <a href="Timing" className="hover:text-blue-300">
-                Mon – Sat: 09:00am – 07:00pm
-              </a>
-            </p>
+            <h4 className="text-xl font-semibold text-white mb-4">
+              Contact Us
+            </h4>
+            <ul className="space-y-3 text-gray-400 [&_a]:text-gray-400 [&_a:hover]:text-blue-300">
+              <li className="flex items-start">
+                <MapPin className="w-8 h-8 mr-3" />
+                <a href="https://www.google.co.in/maps/place/7th+Floor,+Express+Trade+Tower,+2+B-36,+Expressway,+Block+B,+Sector+132,+Noida,+Uttar+Pradesh+201301">
+                  Unit no. 20, 1701, 7th Floor, Express Trade Tower -2,
+                  Sector-132, Noida -201301
+                </a>
+              </li>
+
+              <li className="flex items-center">
+                <Mail className="w-5 h-5 mr-3" />
+                <a href="mailto:contact@benevolentlaw.com">
+                  contact@benevolentlaw.com
+                </a>
+              </li>
+
+              <li className="flex items-center">
+                <PhoneCall className="w-5 h-5 mr-3" />
+                <a href="tel:+919899997595">+91-9899997595</a>
+              </li>
+
+              <li className="flex items-center">
+                <Timer className="w-6 h-6 mr-3" />
+                <span className="text-[#007bff]">
+                  Mon – Sat: 09:00am – 07:00pm
+                </span>
+              </li>
+            </ul>
           </div>
 
           {/* Social Icons */}
           <div>
-            <h4 className="text-lg font-semibold mb-2">Follow Us</h4>
-            <div className="flex gap-4">
+            <h4 className="text-xl font-semibold text-white mb-4">Follow Us</h4>
+            <div className="flex gap-5">
               <a
                 href="https://www.instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:opacity-80"
+                className="pl-3 pt-3 bg-[#1b263b] rounded-full hover:bg-blue-500 transition"
               >
-                <Instagram className="w-6 h-6" />
+                <Instagram className="w-6 h-6 text-gray-400" />
               </a>
+
               <a
                 href="https://www.linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:opacity-80"
+                className="pl-3 pt-3 pr-6 bg-[#1b263b] rounded-full hover:bg-blue-500 transition"
               >
-                <Linkedin className="w-6 h-6" />
+                <Linkedin className="w-6 h-6 text-gray-400" />
               </a>
             </div>
           </div>
         </div>
 
-        <div className="text-center text-sm text-gray-400 mt-6">
+        {/* Divider */}
+        <div className="border-t border-gray-700 mt-10 pt-4 text-center text-gray-500 text-sm">
           © {new Date().getFullYear()} Benevolent Law Chambers. All rights
           reserved.
         </div>
       </footer>
+
       {/* Scroll to Top Button */}
       {showScroll && (
         <button
