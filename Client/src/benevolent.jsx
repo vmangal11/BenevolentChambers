@@ -379,7 +379,7 @@ export default function HomePage() {
             <ul className="space-y-3 text-gray-400 [&_a]:text-gray-400 [&_a:hover]:text-blue-300">
               <li className="flex items-start">
                 <MapPin className="w-8 h-8 mr-3" />
-                <a href="https://www.google.co.in/maps/place/7th+Floor,+Express+Trade+Tower,+2+B-36,+Expressway,+Block+B,+Sector+132,+Noida,+Uttar+Pradesh+201301">
+                <a href="https://maps.app.goo.gl/DQNNp7ybzX9ehwGS9">
                   Unit no. 20, 1701, 7th Floor, Express Trade Tower -2,
                   Sector-132, Noida -201301
                 </a>
@@ -387,8 +387,8 @@ export default function HomePage() {
 
               <li className="flex items-center">
                 <Mail className="w-5 h-5 mr-3" />
-                <a href="mailto:contact@benevolentlaw.com">
-                  contact@benevolentlaw.com
+                <a href="mailto:contact@benevolentgroup.in">
+                  contact@benevolentgroup.in
                 </a>
               </li>
 
@@ -411,7 +411,7 @@ export default function HomePage() {
             <h4 className="text-xl font-semibold text-white mb-4">Follow Us</h4>
             <div className="flex gap-5">
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/benevolentlawchambers?igsh=bDA3aXp1dm12Z2Jj"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="pl-3 pt-3 bg-[#1b263b] rounded-full hover:bg-blue-500 transition"
@@ -420,7 +420,7 @@ export default function HomePage() {
               </a>
 
               <a
-                href="https://www.linkedin.com"
+                href="https://www.linkedin.com/company/benevolent-law-chambers/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="pl-3 pt-3 pr-6 bg-[#1b263b] rounded-full hover:bg-blue-500 transition"
