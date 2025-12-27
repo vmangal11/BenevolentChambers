@@ -202,53 +202,6 @@ export default function HomePage() {
           </p>
         </div>
       </section>
-      {/* About Section */}
-      <section
-        id="About Us"
-        className="
-    relative text-center
-    scroll-mt-[80px] sm:scroll-mt-[96px]
-    h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] xl:h-[100vh]
-    flex items-center justify-center
-    overflow-hidden
-    pt-[80px] sm:pt-0
-  "
-      >
-        {/* Background image */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src={aboutImages[currentImage]}
-            alt="About Background"
-            className="w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
-          />
-          <div className="absolute inset-0 bg-[#dceefc] opacity-40"></div>
-        </div>
-
-        {/* Foreground content */}
-        <div
-          className="
-      relative z-20 px-4 text-center
-      flex flex-col items-center
-      justify-start sm:justify-center
-      h-full
-      pt-6 sm:pt-0
-    "
-        >
-          <div className="text-2xl md:text-3xl font-bold mb-2 text-[#001c3d]">
-            ABOUT OUR FIRM
-          </div>
-
-          <p className="text-sm sm:text-base md:text-lg font-semibold max-w-3xl mx-auto text-[#001c3d]">
-            We are a young and dynamic team of transactional, data privacy and
-            intellectual property rights lawyers, individually having experience
-            of 8+ years in tier-1 law firms and international organisations. We
-            started Benevolent Law Chambers (BLC) in February of 2024; and in
-            this short period, have managed to scale our profile across multiple
-            sectors, with clients ranging from start-ups to listed entities,
-            spanning the length and breadth of India.
-          </p>
-        </div>
-      </section>
       {/* Practice Areas */}
       <motion.section
         id="Practice Areas"
