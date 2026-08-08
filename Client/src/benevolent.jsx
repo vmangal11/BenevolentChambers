@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { ReactComponent as Instagram } from "./icons/instagram.svg";
 import { ReactComponent as Linkedin } from "./icons/linkedin.svg";
 import Clients from "./Clients.jsx";
@@ -12,6 +12,9 @@ export default function HomePage() {
   const location = useLocation();
   const [showScroll, setShowScroll] = useState(false);
   const [showHeroText, setShowHeroText] = useState(true);
+  
+  // 1. Create a reference to the video element
+  const videoRef = useRef(null);
 
   useEffect(() => {
     if (location.state?.scrollTo) {
@@ -19,6 +22,17 @@ export default function HomePage() {
       document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     }
   }, [location]);
+
+  // 2. Force the video to play on initial load for mobile browsers
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      videoRef.current.play().catch((error) => {
+        console.log("Mobile browser prevented autoplay, waiting for interaction", error);
+      });
+    }
+  }, []);
 
   const services = [
     { text: "General corporate advisory work - review/drafting, negotiation and finalization of agreements", icon: <Briefcase className="w-8 h-8 mb-4 text-[#001c3d]" /> },
@@ -52,7 +66,6 @@ export default function HomePage() {
     const video = e.target;
     if (video.duration) {
       const timeLeft = video.duration - video.currentTime;
-      // Start fading out at the 5-second mark
       if (timeLeft <= 3.29) {
         if (showHeroText) setShowHeroText(false);
       } else {
@@ -70,12 +83,13 @@ export default function HomePage() {
         id="About Us"
         className="w-full bg-[#eaeef3] scroll-mt-[80px]"
       >
-        {/* Container is exactly the screen height minus navbar (no scrolling) */}
-        <div className="relative w-full h-[calc(100vh-70px)] bg-[#001c3d] overflow-hidden flex justify-center items-center">
+        {/* 3. Responsive Container: h-[50vh] on mobile so it doesn't stretch, md:h-[calc(100vh-70px)] on desktop */}
+        <div className="relative w-full h-[50vh] md:h-[calc(100vh-70px)] bg-[#001c3d] overflow-hidden flex justify-center items-center">
           
-          {/* Changed to object-fill to force full width without cropping (will slightly stretch the video) */}
+          {/* 4. Responsive Video: object-cover on mobile for natural proportions, md:object-fill on desktop to prevent cropping */}
           <video
-            className="absolute inset-0 w-full h-full object-fill"
+            ref={videoRef}
+            className="absolute inset-0 w-full h-full object-cover md:object-fill"
             autoPlay
             muted
             loop
